@@ -1,16 +1,15 @@
 package com.zte.crm.winterspring5;
 
-import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
+import org.springframework.boot.autoconfigure.AutoConfigureOrder;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.core.Ordered;
 import org.springframework.core.annotation.AnnotatedElementUtils;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.servlet.config.annotation.DelegatingWebMvcConfiguration;
 import org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping;
 
 @Configuration
-@ConditionalOnProperty(name = "handler.mapping.controller.only",
-        havingValue = "true",
-        matchIfMissing = true)
+@AutoConfigureOrder(Ordered.HIGHEST_PRECEDENCE)
 public class WebConfig extends DelegatingWebMvcConfiguration {
     @Override
     public RequestMappingHandlerMapping requestMappingHandlerMapping() {
