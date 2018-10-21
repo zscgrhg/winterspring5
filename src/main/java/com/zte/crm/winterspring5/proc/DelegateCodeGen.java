@@ -26,7 +26,7 @@ import java.util.HashSet;
 import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
 
-@SupportedAnnotationTypes("com.zte.crm.chromie.contract.anno.Producer")
+@SupportedAnnotationTypes("com.zte.crm.winterspring5.anno.Producer")
 @SupportedSourceVersion(SourceVersion.RELEASE_8)
 public class DelegateCodeGen extends JCBuddy {
     public static final String CLASS_AUTOWIRED = Autowired.class.getCanonicalName();
